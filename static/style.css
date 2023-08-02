@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('fonts/DinkieBitmapDemo-9px.ttf') format('truetype');
+}
+
+body {
+    font-family: MyFont, sans-serif;
+}
+
+.invoice {
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #000;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 34px;
+    margin: 0;
+}
+
+.content {
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin: 0;
+}
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.content table th,
+.content table td {
+    padding: 10px;
+    border: none;
+}
+
+.content table th {
+    border-bottom: 2px dashed #000;
+}
+.content table th:last-child {
+    padding: 0;
+    border-bottom: 2px dashed #000;
+}
+
+table .item{
+    text-align: center;
+}
+
+.content table tr:first-child th {
+    background-color: transparent;
+}
+
+.store-info {
+    margin-top: 20px;
+}
+
+.shopping-tips {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: justify;
+    position: relative;
+}
+
+.clear{
+    clear: both;
+}
+
+.order-info,
+.store-info {
+    display: inline-block;
+    padding-right: 30px;
+    /* 可以添加其他样式，例如设置宽度、间距等 */
+}
+a {
+    text-decoration: none; /* 去除默认的下划线 */
+    outline: none;	/* 去除旧版浏览器的点击后的外虚线框 */
+    color: #000;	/* 去除默认的颜色和点击后变化的颜色 */
+}
+
+
+@media (max-width: 767px) {
+    /* Remove borders on mobile devices */
+    .invoice {
+        border: none;
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Adjust font size for mobile devices */
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .content table th,
+    .content table td {
+        padding: 5px;
+    }
+
+    /* Center QR code on mobile devices */
+    #qrcode {
+        margin: 0 auto;
+    }
+
+    /* Adjust padding and width of order-info and store-info on mobile devices */
+    .order-info,
+    .store-info {
+        padding-right: 0;
+        width: 100%;
+    }
+
+}
