@@ -32,7 +32,7 @@ function updateFormData($sitename, $info_1, $info_2, $info_3) {
     // 依次更新表单数据
     $stmt->bind_param("ss", $config_value, $config_key);
 
-    $config_key = 'sitename';
+    $config_key = 'webname';
     $config_value = $sitename;
     $stmt->execute();
 
